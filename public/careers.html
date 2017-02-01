@@ -1,86 +1,88 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>A logging app using Node.js</title>
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-		<script
-			  src="https://code.jquery.com/jquery-3.1.1.min.js"
-			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-			  crossorigin="anonymous"></script>
- 	</head>
 
+<head>
+	<title>A logging app using Node.js</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			crossorigin="anonymous"></script>
+</head>
 
-	<body>
-		<div class = "container">
-		    <div style="padding:10px;" class = "jumbotron">
-
-		    	<h2>Sample Node.js Application</h2><br />
-		    		<div class = "row">
-		    			<a id="home" href="/index.html"><div style="background-color:#e9573f;margin-left: 5px;color:black;" class = "col-md-2 col-sm-2 col-xs-2"><h4>Home</h4></div></a>
-		    			<a href="/contact.html"><div style="background-color:#e9573f;margin-left: 2px;color:black;" class = "col-md-2 col-sm-2 col-xs-2"><h4>Contact</h4></div></a>
-		    			<a href="/careers.html"><div style="background-color:#e9573f;margin-left: 2px;color:black;" class = "col-md-2 col-sm-2 col-xs-2"><h4>Plans</h4></div></a>
-		    			<a href="/aboutus.html"><div style="background-color:#e9573f;margin-left: 2px;color:black;" class = "col-md-2 col-sm-2 col-xs-2"><h4>About Us</h4></div></a>
-		    		</div>
-		    </div>
-		    <div style="padding:50px" class="well">
-		    	<div class="row">
-
-
-		    	</div>
-		    	<br /><br />
-		    	<div class="row">
-		    	<button type="button" class="btn btn-danger col-md- col-md-offset-5">Show activites from this IP</button>
-		    	</div>
-		    </div>
+<body>
+	<div class="container">
+		<div style="padding:10px;" class="jumbotron">
+			<h2>Sample Node.js Application</h2><br />
+			<div class="row">
+				<a id="home" href="/index.html">
+					<div style="background-color:#e9573f;margin-left: 5px;color:black;" class="col-md-2 col-sm-2 col-xs-2">
+						<h4>Home</h4>
+					</div>
+				</a>
+				<a href="/contact.html">
+					<div style="background-color:#e9573f;margin-left: 2px;color:black;" class="col-md-2 col-sm-2 col-xs-2">
+						<h4>Contact</h4>
+					</div>
+				</a>
+				<a href="/careers.html">
+					<div style="background-color:#e9573f;margin-left: 2px;color:black;" class="col-md-2 col-sm-2 col-xs-2">
+						<h4>Plans</h4>
+					</div>
+				</a>
+				<a href="/aboutus.html">
+					<div style="background-color:#e9573f;margin-left: 2px;color:black;" class="col-md-2 col-sm-2 col-xs-2">
+						<h4>About Us</h4>
+					</div>
+				</a>
+			</div>
 		</div>
+		<div style="padding:50px" class="well">
+			<div class="row">
+			</div>
+			<br /><br />
+			<div class="row">
+				<button type="button" class="btn btn-danger col-md- col-md-offset-5">Show activites from this IP</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
 
-		<script>
-			$(document).ready(function(){
-
-
-				//alert("jquery works");s
-				$('a').hover(function(){
-					//alert("yes");
-					$(this).children().css('color','white');
-				}).mouseleave(function(){
-					$(this).children().css('color','black');
-				});
-
-				$.get("http://ipinfo.io", function (response) {
-					//alert(response.ip);
-    			}, "jsonp");
-
-
-				var dataSample = {
-						  "items": [
-						    {
-						      "key": "First",
-						      "value": 100
-						    },{
-						      "key": "Second",
-						      "value": false
-						    },{
-						      "key": "Last",
-						      "value": "Mixed"
-						    }
-						  ],
-						  "obj": {
-						    "number": 1.2345e-6,
-						    "enabled": true
-						  },
-						  "message": "Strings have to be in double-quotes."
-							}
-
-				$.getJSON('/home',dataSample, function (data) {
-   					 console.log(data);
-  				});
-
-				
+			//alert("jquery works");
+			$('a').hover(function () {
+				//alert("yes");
+				$(this).children().css('color', 'white');
+			}).mouseleave(function () {
+				$(this).children().css('color', 'black');
 			});
 
-		</script>
-	</body>
+			$.get("http://ipinfo.io", function (response) {
+				//alert(response.ip);
+			}, "jsonp");
 
+			var dataSample = {
+				"items": [{
+					"key": "First",
+					"value": 100
+				}, {
+					"key": "Second",
+					"value": false
+				}, {
+					"key": "Last",
+					"value": "Mixed"
+				}],
+				"obj": {
+					"number": 1.2345e-6,
+					"enabled": true
+				},
+				"message": "Strings have to be in double-quotes."
+			}
+
+			$.getJSON('/home', dataSample, function (data) {
+				console.log(data);
+			});
+		});
+	</script>
+</body>
 
 </html>
