@@ -15,22 +15,22 @@
 		<div style="padding:10px;" class="jumbotron">
 			<h2>Sample Node.js Application</h2><br />
 			<div class="row">
-				<a id="home" loc="index.html" href="javascript:void(0);">
+				<a id="home" loc="index.html" label="Home" href="javascript:void(0);">
 					<div style="background-color:#e9573f;margin-left: 5px;color:black;" class="col-md-2 col-sm-2 col-xs-2">
 						<h4>Home</h4>
 					</div>
 				</a>
-				<a loc="contact.html" href="javascript:void(0)">
+				<a loc="contact.html" label="Contact" href="javascript:void(0)">
 					<div style="background-color:#e9573f;margin-left: 2px;color:black;" class="col-md-2 col-sm-2 col-xs-2">
 						<h4>Contact</h4>
 					</div>
 				</a>
-				<a loc="plans.html" href="javascript:void(0)">
+				<a loc="plans.html" label="Plans" href="javascript:void(0)">
 					<div style="background-color:#e9573f;margin-left: 2px;color:black;" class="col-md-2 col-sm-2 col-xs-2">
 						<h4>Plans</h4>
 					</div>
 				</a>
-				<a loc="aboutus.html" href="javascript:void(0)">
+				<a loc="aboutus.html" label="About Us" href="javascript:void(0)">
 					<div style="background-color:#e9573f;margin-left: 2px;color:black;" class="col-md-2 col-sm-2 col-xs-2">
 						<h4>About Us</h4>
 					</div>
@@ -107,7 +107,7 @@
 			});
 
 			$('a').click(function () {
-				var clicktxt = $(this).text();
+				var clicktxt = $(this).attr('label');
 				var page = $(this).attr('loc');
 				sendipinfo(clicktxt, page);
 
