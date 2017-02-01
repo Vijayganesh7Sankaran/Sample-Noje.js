@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>A logging app using Node.js</title>
+		<script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
+		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	
+ 	</head>
+
+
+	<body>
+		<div class = "container">
+		    <div style="padding:10px;" class = "jumbotron">
+
+		    	<h2>Sample Node.js Application</h2><br />
+		    		<div class = "row">
+		    			<a id="home" loc="index.html" href="javascript:void(0);"><div style="background-color:#e9573f;margin-left: 5px;color:black;" class = "col-md-2 col-sm-2 col-xs-2"><h4>Home</h4></div></a>
+		    			<a loc="contact.html" href="javascript:void(0)"><div style="background-color:#e9573f;margin-left: 2px;color:black;" class = "col-md-2 col-sm-2 col-xs-2"><h4>Contact</h4></div></a>
+		    			<a loc="plans.html" href="javascript:void(0)"><div style="background-color:#e9573f;margin-left: 2px;color:black;" class = "col-md-2 col-sm-2 col-xs-2"><h4>Plans</h4></div></a>
+		    			<a loc="aboutus.html" href="javascript:void(0)"><div style="background-color:#e9573f;margin-left: 2px;color:black;" class = "col-md-2 col-sm-2 col-xs-2"><h4>About Us</h4></div></a>
+		    		</div>
+		    </div>
+		    <div style="padding:50px" class="well">
+		    	<div class="row">
+		    		<h3>Article 1</h3>
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat massa vel sapien posuere euismod. Aenean neque turpis, consequat eu cursus quis, congue vitae sem. Donec scelerisque eu odio id pellentesque. Sed consectetur, eros sit amet feugiat dapibus, mi elit porttitor risus, eget laoreet ante lorem eget dolor. Duis posuere sit amet sem et porttitor. Maecenas mollis nisl risus, et scelerisque ante rhoncus id. Morbi finibus in urna et mattis. Integer quis efficitur sem, ut tempor sem. Phasellus dapibus cursus mi pellentesque laoreet. Quisque ultricies lacus elit, quis ornare nisi iaculis vel. Sed metus orci, convallis non suscipit nec, viverra eget turpis. Aliquam euismod ac orci nec imperdiet. Fusce venenatis purus sit amet lorem fringilla semper.
+
+					Sed dapibus dolor et dui dignissim, finibus condimentum elit eleifend. Nam quis libero sed urna tincidunt finibus eu ac nibh. Fusce elementum risus velit, vitae dignissim odio accumsan sodales. Cras magna dui, sagittis placerat iaculis ut, egestas hendrerit odio. Nunc egestas dapibus scelerisque. Aenean sollicitudin sapien elementum, scelerisque augue non, dignissim justo. Maecenas eget placerat sem, et lacinia justo. Vestibulum scelerisque lobortis ultricies. Duis hendrerit hendrerit nunc, ac porta purus finibus a.
+
+					Sed dolor massa, facilisis vel placerat et, gravida id augue. Donec magna urna, eleifend sit amet sollicitudin vitae, placerat non leo. Maecenas a scelerisque tellus, ac porttitor tellus. Vivamus fringilla augue sit amet imperdiet auctor. Integer mollis ex felis, sit amet mollis erat feugiat eu. Suspendisse pretium tristique sem, quis facilisis odio consectetur quis. Fusce condimentum purus id convallis maximus. Integer sed dui tellus. Mauris cursus semper sollicitudin. Praesent lacinia laoreet eros, eu egestas ex convallis sit amet.
+
+					Maecenas vehicula ante vitae ligula vehicula aliquam. Fusce fermentum pulvinar aliquam. Donec fermentum venenatis libero, consequat dignissim nulla fringilla non. Vestibulum id turpis porttitor risus vestibulum hendrerit quis eu justo. Sed sit amet tincidunt neque, sollicitudin sagittis ipsum. Ut consectetur auctor malesuada. Nulla sodales in odio at pulvinar. Mauris aliquam egestas tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent a tellus eleifend, maximus velit in, consequat justo. Nunc tristique dui felis, varius condimentum justo efficitur tincidunt. Nunc luctus molestie diam, nec volutpat magna faucibus ornare. Aliquam et nibh volutpat, iaculis odio et, semper urna. Donec ultricies libero quis lorem imperdiet, sit amet tempor nulla pellentesque. Aenean nulla lorem, scelerisque ac sodales at, ullamcorper a leo.
+
+					Quisque sed dapibus ipsum, ac efficitur urna. Nunc posuere est vitae purus mattis pretium. Sed vitae dictum magna, ut tincidunt felis. In nec ornare nulla. In ac ipsum sit amet tortor rhoncus efficitur. Sed vitae dolor laoreet, blandit justo ac, dignissim augue. Donec fermentum vel sem a fermentum. Nullam hendrerit nunc id lacinia dictum. Sed consectetur commodo dui, non accumsan lectus finibus in. Sed sit amet purus eget libero convallis dapibus at quis est. Duis sit amet sem pellentesque, porttitor nibh id, lobortis libero. Morbi id condimentum velit. Nam tincidunt, ipsum quis venenatis fermentum, tortor neque elementum erat, in sagittis arcu libero sed ante. Cras non fringilla ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vitae ante id nibh mattis ultrices. 
+
+
+		    	</div>
+		    	<br /><br />
+		    	<div class="row">
+		    	<button id="showdata" type="button" class="btn btn-danger col-md- col-md-offset-5">Show activites from this IP</button>
+		    	</div>
+		    </div>
+		    <div id="myModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">Activity logs</h4>
+			      </div>
+			      <div class="modal-body">
+			        <ul id="ins">
+			        	
+			        </ul>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function(){
+
+				
+				//alert("jquery works");s
+				var ipaddr;
+				$('a').hover(function(){
+					//alert("yes");
+					$(this).children().css('color','white');
+				}).mouseleave(function(){
+					$(this).children().css('color','black');
+				});
+
+				$('a').click(function(){
+					var clicktxt = $(this).text();
+					var page = $(this).attr('loc');
+					sendipinfo(clicktxt,page);
+					
+				});
+
+
+
+				function tojson(ip,txt,page){
+				var dataSample = {
+						  "user": 
+						    {
+						      "ip": ip,
+						      "time": new Date(),
+						      "method": "POST",
+						      "description":"User has clicked "+txt
+						    }
+						  
+						}
+
+						$.ajax({
+  						  	url: '/postlogs', 
+						    type: 'POST', 
+						    contentType: 'application/json', 
+						    data: JSON.stringify(dataSample),
+						    success: function(data) {
+						    	console.log("sucess");
+					            window.location.href = page;
+					             }
+						});
+
+				}
+
+				function sendipinfo(txt,page){
+					$.get("http://ipinfo.io", function (response) {
+							//alert(response.ip);
+							console.log(response);
+
+							
+							tojson(response.ip,txt,page);
+							
+
+		    				}, "jsonp");
+				}
+				function getipinfo(purpose){
+					
+							$.get("http://ipinfo.io", function (response) {
+							//alert(response.ip);
+							console.log(response);
+
+							if(purpose === "get"){
+								hitip(response.ip);
+							}
+
+		    				}, "jsonp");
+				}
+
+				function hitip(ip){
+					ipaddr = ip;
+					//alert(ipaddr);
+					$.get('/getlogs',{"ip":ip}, function (data) {
+						//alert(data);
+   					 console.log(data);
+   					 //var showJson = JSON.parse(data);
+   					 var i=0;
+   					 for(i=0;i<data.user.length;i++){
+   					 	$('#ins').append('<li>'+data.user[i].ip+" | "+data.user[i].time+" | "+data.user[i].method+" | "+data.user[i].description+'</li>');
+   					 }
+   					 $('#myModal').modal('show');
+   						
+  					});
+				}
+
+    			
+				$('#showdata').click(function(){
+
+					 
+  					getipinfo("get");
+
+
+    			    
+				});
+
+			});
+
+		</script>
+	</body>
+
+
+</html>

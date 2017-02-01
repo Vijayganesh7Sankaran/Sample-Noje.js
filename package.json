@@ -1,0 +1,20 @@
+{
+  "name": "very-first-node-package",
+  "version": "1.0.0",
+  "description": "logging application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vijay-ganesh",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cors": "^2.8.1",
+    "express": "^4.14.1",
+    "httpster": "^1.0.3",
+    "jshint": "^2.9.4",
+    "node-dev": "^3.1.3",
+    "underscore": "^1.8.3"
+  }
+}
